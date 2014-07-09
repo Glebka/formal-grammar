@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Сообщения об ошибках</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
+
+</head>
+
+<BODY>
+<H1>Сообщения об ошибках 
+<HR>
+</H1>
+<P><FONT size=2 face=Arial><IMG alt="" align=absMiddle 
+src="error.png">&nbsp;<STRONG>Недопустимое имя нетерминала.<BR><BR></STRONG>В 
+имени нетерминала использоавны недопустимые символы. Обратитесь к главе <A href="howto.htm">Правила кодирования 
+грамматики</A>.</FONT></P>
+<P><IMG alt="" align=absMiddle src="error.png"><FONT size=2 
+face=Arial>&nbsp;<STRONG>Нетерминал 'ИМЯ_НЕТЕРМИНАЛА' был определен 
+ранее.<BR><BR></STRONG>Данный нетерминал уже встречался ранее в левой части 
+одного из правил грамматики. Воспользуйтесь поиском по тексту грамматики 
+(комбинация клавиш <STRONG>Ctrl + F</STRONG>), найдите первое определение 
+нетрминала и добавьте в конец правой части правила синтаксические термы из 
+правила, которое вызывает эту ошибку (см. <A href="theory.htm">Теория языков и 
+формальных грамматик</A>).</FONT></P>
+<P><FONT size=2 face=Arial><IMG alt="" align=absMiddle 
+src="error.png">&nbsp;<STRONG>Строка не является правилом 
+грамматики.<BR><BR></STRONG>Обратитесь к главе <A href="howto.htm">Правила кодирования грамматики</A>.</FONT></P>
+<P><IMG alt="" align=absMiddle src="error.png"><FONT size=2 
+face=Arial>&nbsp;<STRONG>Недостижимый символ 
+'ИМЯ_НЕТЕРМИНАЛА'.</STRONG></FONT></P>
+<P><FONT size=2 face=Arial>Эта ошибка возникает, когда в грамматике определен 
+нетерминал, который не встречается в правых частях правил. Чтобы устранить эту 
+ошибку, удалите правило, определяющее этот нетерминал, или включите его в правую 
+часть соответствующего правила.</FONT></P>
+<P><IMG alt="" align=absMiddle src="error.png"><FONT size=2 
+face=Arial>&nbsp;<STRONG>Непроизводящий символ 
+'ИМЯ_НЕТЕРМИНАЛА'.</STRONG></FONT></P>
+<P><FONT size=2 face=Arial>Эта ошибка возникает, когда в грамматике обнаружен 
+нетерминал, который встречается только в правых частях правил, но не встречается 
+в левой части ни одного правила, т.е является неопределенным. Чтобы устранить 
+эту ошибку, определите этот нетерминал, т.е создайте новое правило, в левой 
+части которого будет указан этот нетерминал.</FONT></P>
+<P><IMG alt="" align=absMiddle src="error.png"><FONT size=2 
+face=Arial>&nbsp;<STRONG>Возможна бесконечная рекурсия при выводе цепочки из 
+символа 'ИМЯ_НЕТЕРМИНАЛА'.</STRONG></FONT></P>
+<P><FONT size=2 face=Arial>Как правило, таких сообщений может быть несколько. 
+Эта ошибка говорит о том, что следуя правилам грамматики невозможно вывести 
+конечную цепочку символов. Рассмотрим пример грамматики, которая вызывает такую 
+ошибку:</FONT></P>
+<BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr>
+  <P><FONT size=2 face=Arial>program = header body "end"</FONT></P>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>char = "a" ! "b" ! "c" ! "d" ! "e"</FONT></P>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>operator = "оператор" operator</FONT></P>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>program_name = char ! char program_name</FONT></P>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>header = "Program " program_name</FONT></P>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>body = operator ! operator body</FONT></P></BLOCKQUOTE>
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0" 
+dir=ltr><FONT size=2 face=Arial>Обратите внимание на правило:</FONT></P>
+<BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>operator = "оператор" operator</FONT></P></BLOCKQUOTE>
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0" 
+dir=ltr><FONT size=2 face=Arial>Очевидно, что это правило - бесконечно 
+рекурсивное. Из-за ошибки в этом правиле бесконечно рекурсивными стали 
+нетерминалы "body" и "program".</FONT></P>
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0" 
+dir=ltr><FONT size=2 face=Arial>Для того, чтобы устранить эту ошибку, можно, к 
+примеру, отредактировать правило так:</FONT></P><FONT size=2 face=Arial>
+<BLOCKQUOTE style="MARGIN-RIGHT: 0px" dir=ltr>
+  <P 
+  style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0"><FONT 
+  size=2 face=Arial>operator = "оператор" operator ! 
+"оператор"</FONT></P></BLOCKQUOTE>
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0" 
+dir=ltr><IMG alt="" align=absMiddle src="error.png">&nbsp;<STRONG>Конфликт типа 
+'ТИП_КОНФЛИКТА'.</STRONG></P>
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0" 
+dir=ltr><STRONG></STRONG>&nbsp;</P>
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; -qt-block-indent: 0; -qt-user-state: 0" 
+dir=ltr>Возникновение конфликтов в матрице предшествования свидетельствует о 
+наличии неоднозначностей в грамматике, которые делают невозможным синтаксический 
+анализ методом простого предшествования. Обратитесь к главе <A href="grammar_debug.htm">Отладка 
+грамматик</A>&nbsp;за информацией о том, как устранить 
+конфликты.</P></FONT></BODY>
+</html>

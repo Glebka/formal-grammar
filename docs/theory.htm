@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Теория языков и формальных грамматик</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1251">
+
+</head>
+
+<BODY>
+<H1>Теория языков и формальных грамматик
+<HR>
+</H1>
+<P><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><FONT 
+size=2 face=Arial>Существует два основных способа определения 
+языков:</FONT></SPAN></P>
+<OL>
+  <LI><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><FONT 
+  size=2 face=Arial>Механизм порождения (генератор);</FONT></SPAN> 
+  <LI><SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><FONT 
+  size=2 face=Arial>Механизм распознавания 
+(распознаватель).</FONT></SPAN></LI></OL><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT size=2>Они 
+тесно связаны, и первый обычно используется для описания языков, а второй – для 
+их реализации. Оба способа позволяют описать языки конечным образом, не смотря 
+на бесконечное число порождаемых ими цепочек. </FONT></FONT></SPAN><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2>Механизм порождения позволяет описать языки с помощью системы правил, 
+называемой <STRONG>грамматикой</STRONG>. Цепочки (предложения языка)<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>строятся в соответствии с этими 
+правилами. </FONT></FONT></SPAN><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2>Достоинства определения языка с помощью грамматик состоит в том что 
+операции производимые в ходе синтаксического анализа и перевода можно делать 
+проще если воспользоваться структурой предписываемой цепочкам с помощью этих 
+грамматик. </FONT></FONT></SPAN><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2>Механизм распознавания использует алгоритм, который для произвольной 
+входной цепочки остановится и ответит «да» после конечного числа шагов если 
+цепочка принадлежит языку, и «нет» если не 
+принадлежит.&nbsp;</FONT></FONT></SPAN><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2>Распознаватели используются непосредственно при построении синтаксических 
+анализаторов и являются как бы их формальной моделью. Обычно<SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>распознаватели строятся на основе теорий 
+конечных автоматов. </FONT></FONT></SPAN><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT size=2>Под 
+формализмом понимается строгость определения языка. Недостатком формального 
+изложения является его громоздкость.</FONT></FONT></SPAN></P><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'">
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT size=2>Для 
+того чтобы формально определить язык необходимо задать некоторые компоненты 
+этого языка – <B style="mso-bidi-font-weight: normal">алфавит</B> (множество 
+допустимых знаков языка). Отдельные знаки могут объединяться в слова (лексемы). 
+Словарный запас языка определяет лексику языка. </FONT></FONT></SPAN><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2>Слова могут объединяться в предложения (операторы, инструкции). 
+Правильность построения предложений определяется синтаксисом языка. 
+</FONT></FONT></SPAN><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><FONT 
+size=2 face=Arial>Смысловое содержание предложений определяет семантика 
+языка.</FONT> </SPAN></P><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT size=2>Для 
+определения синтаксиса языка используется <STRONG>БНФ</STRONG> (нормальная 
+Бэкусова форма или Бэкуса-Наура форма).<O:P></O:P></FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2><STRONG>БНФ</STRONG> конструкция определяет конечное число символов 
+(<STRONG>нетерминалов</STRONG>), кроме того она определяет правила замены 
+символа на какую то последовательность букв (<STRONG>терминалов</STRONG>) и 
+символов. </FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2><STRONG>Терминальные символы</STRONG> – это минимальные элементы 
+грамматики, не имеющие своей собственной грамматической структуры. Это могут 
+быть предопределённые идентификаторы либо цепочки (последовательности символов в 
+кавычках или апострофах).<BR><STRONG>Нетерминальные символы</STRONG> – это 
+элементы грамматики, имеющие собственные имена и структуры. Каждый 
+нетерминальный символ состоит из одного или более терминальных и/или 
+нетерминальных символов, сочетание которых определяется правилами грамматики. 
+Каждый нетерминальный символ имеет своё имя, состоящее из строки символов. Для 
+простоты в примерах грамматик нетерминальные символы обозначаются большими 
+латинскими литерами, а терминальные символы - 
+маленькими.</FONT></FONT></SPAN><O:P></O:P></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT face=Arial><FONT 
+size=2>Процесс получения цепочки букв можно определить поэтапно: изначально 
+имеется один символ (символы обычно заключаются в угловые скобки, а их названия 
+не формализованы), затем этот символ заменяется на некоторую последовательность 
+букв и символов, согласно одному из правил. Процесс повторяется и в конце 
+получается цепочка, состоящая из букв и не содержащая нетерминальных символов. 
+Это означает, что полученная цепочка может быть выведена из начального символа 
+грамматики, а значит является предложением языка.</FONT></FONT></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+style="FONT-FAMILY: 'Times New Roman','serif'"><FONT size=2 face=Arial>Правила в 
+<STRONG>БНФ </STRONG>включают следующие возможности:</FONT></SPAN></P>
+<UL>
+  <LI>
+  <DIV class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+  style="FONT-FAMILY: 'Times New Roman','serif'"><FONT size=2 
+  face=Arial><STRONG>Конкатенация</STRONG> – специального обозначения не имеет, 
+  определяется последовательной записью символов в выражении. Правила вида A 
+  -<SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt; 
+  </SPAN>BC обозначает, что нетерминал A состоит из символов B и 
+  C;</FONT></SPAN></DIV>
+  <LI>
+  <DIV class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN 
+  style="FONT-FAMILY: 'Times New Roman','serif'"></SPAN><FONT size=2 
+  face=Arial><STRONG>Выбор</STRONG> – обозначается вертикальной чертой. Правило 
+  вида A -<SPAN 
+  style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt; 
+  </SPAN>B|C|D&nbsp; показывает что из A выводится или B или C или D. Элементы 
+  выбора называют синтаксическими термами или просто 
+термами.</FONT></DIV></LI></UL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><FONT size=2 
+face=Arial><STRONG>БНФ</STRONG> конструкция состоит из нескольких предложений 
+вида: </FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt">&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=center><FONT size=2 
+face=Arial>&lt;опред. символ&gt; -<SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</SPAN></SPAN>&nbsp; 
+&lt;посл.1&gt; | &lt;посл.2&gt; | … | &lt;посл.n&gt;</FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=center><FONT size=2 
+face=Arial>&nbsp;</P></FONT><FONT size=2 face=Arial></FONT>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=left><FONT size=2 
+face=Arial>Например, представим с помощью <STRONG>БНФ</STRONG> целое число без 
+знака:</FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=left><FONT size=2 
+face=Arial><BR>&nbsp;</P></FONT>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=center><FONT size=2 
+face=Arial>&lt;цел. число без зн.&gt; -<SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</SPAN></SPAN> 
+&lt;цифра&gt; | &lt;цифра&gt; &lt;цел. число без зн.&gt;<BR>&lt;цифра&gt; -&gt; 
+0|1|…|9</FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=center><FONT size=2 
+face=Arial>&lt;цел. число со зн.&gt; -<SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</SPAN></SPAN> 
+&lt;цел. число без зн.&gt; | &lt;знак&gt;&lt;цел. число без 
+зн.&gt;<BR>&lt;знак&gt; -&gt; +|-</FONT></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" align=center><FONT size=2 
+face=Arial>&lt;число со зн. с фикс. точкой&gt; -<SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><SPAN 
+style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman','serif'; LINE-HEIGHT: 115%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: RU; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">&gt;</SPAN></SPAN> 
+&lt;цел. ч. без зн.&gt;.&lt;цел. число без зн.&gt; | &lt;знак&gt;&lt;цел. ч. без 
+зн.&gt;.&lt;цел. число без зн.&gt;</FONT></P>
+<P><FONT size=2 face=Arial>&nbsp;</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt" 
+align=center><BR></P></FONT></SPAN></SPAN></SPAN></BODY>
+</html>

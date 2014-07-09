@@ -1,0 +1,90 @@
+<html>
+<head>
+    <script type="text/javascript" src="xpathjs.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+    window.createRule=function(parent)
+    {
+        var elem=$('.'+parent+':first');
+        $('<center></center>').appendTo(elem);
+    }
+    window.markNoinfrec=function(name)
+    {
+        $('.'+name).addClass('noinfrec');
+    }
+    window.appendNode=function(parent,child)
+    {
+        if(parent.length==0)
+        {
+            if($('.'+child).size()==0)
+            {
+                $('<div class="'+child+'"></div>').appendTo('body');
+            }
+            return;
+        }
+        var elem=$('.'+parent+":first");
+        var lastRule=elem.children('center:last');
+        if(lastRule.size()==0)
+        {
+            lastRule=$('<center></center>').appendTo(elem);
+        }
+       
+        if(lastRule.children('.'+child).size()==0)
+        {
+            $('<div class="'+child+'"></div>').appendTo(lastRule);
+        }
+        
+    }
+    window.process=function()
+    {
+        //window.processor.notifyMe($('body').html());
+        XPathJS.bindDomLevel3XPath();
+        var body=document.getElementsByTagName('body')[0];
+        //body.innerHTML=window.xml.getString();
+        
+        while(true)
+        {
+            var nonrec=$('.noinfrec');
+            if(nonrec.size()==0) break;
+            nonrec.each(function(){
+               $(this).removeClass('noinfrec');
+               window.scanner.markNonTermAsNonRec($(this).attr('class'));
+               $(this).remove();
+            });
+            //var emptyRules=$('center:empty');
+            var deleteOnce=false;
+            result = document.evaluate(
+                '//center[not(.//*)]', // XPath expression
+                body, // context node
+                null, // namespace resolver
+                XPathResult.ORDERED_NODE_SNAPSHOT_TYPE
+            );
+            for (var i = 0; i < result.snapshotLength; i++) {
+                deleteOnce=true;
+                var node = result.snapshotItem(i);
+                var parent=$(node).parent();
+                var parentName=parent.attr('class');
+                $('.'+parentName).each(function(){
+                    //window.scanner.markNonTermAsNonRec($(this).attr('class'));
+                    $(this).addClass('noinfrec');
+                });
+                $(node).remove();
+            }
+            if(!deleteOnce) break;
+        }
+        var infrec=window.scanner.getInfRecNonTermsString().split('|');
+        for(var i=0;i<infrec.length;i++)
+        {
+            if($('.'+infrec[i]).size()==0)
+                window.scanner.markNonTermAsNonRec(infrec[i]);
+            
+        }
+        
+        //alert(body.innerHTML);
+        window.processor.notifyMe($('body').html());
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>
